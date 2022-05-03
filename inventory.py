@@ -1,3 +1,25 @@
+fileName = "inventoryInfo.txt"
+delimeter = '='
+
+file = open(fileName, 'r') ##reads file
+
+def findValue(fullstring):
+    fullString = fullstring.rstrip('\n') ##ommits r variable
+    value = fullstring[fullString.index(delimeter)+1:] ##locate index to start at
+    value = value.replace(" ", "") ##ommit spaces
+    return value
+
+
+for line in file:
+    if line.startswith('name'):
+        name = findValue(line)
+    if line.startswith('id'):
+        id = findValue(line)
+    if line.startswith('quantity'):
+        quantity = findValue(line)
+    if line.startswith('price'):
+        price = findValue(line)
+
 class Inventory:
     def __init__(self, capacity):
         self.capacity = capacity
@@ -10,14 +32,7 @@ class Books:
         self.quantity = quantity
         self.price = price
 
-##formula showing complete price of same book
-    @property
-    def combinedPrice(self):
-        return f'${self.quantity * self.price:.2f}'
-
-##class to show the books id, price, and name
-    def show(self):
-        id = 1
-        for book in self.books:
-            print(str(f'{id} -> [x{book.price}] {book.name}'))
-            id += 1
+print(name)
+print(id)
+print(quantity)
+print(price)
