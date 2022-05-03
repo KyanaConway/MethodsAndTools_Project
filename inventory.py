@@ -6,13 +6,13 @@ file = open(fileName, 'r') ##reads file
 def findValue(fullstring):
     fullString = fullstring.rstrip('\n') ##ommits r variable
     value = fullstring[fullString.index(delimeter)+1:] ##locate index to start at
-    value = value.replace(" ", "") ##ommit spaces
+    ##value = value.replace(" ", "") ommit spaces
     return value
 
 
 for line in file:
-    if line.startswith('name'):
-        name = findValue(line)
+    if line.startswith('title'):
+        title = findValue(line)
     if line.startswith('id'):
         id = findValue(line)
     if line.startswith('quantity'):
@@ -26,13 +26,13 @@ class Inventory:
         self.books = [] ##empty list for books
 
 class Books:
-    def __init__(self, name, id, quantity, price ):
-        self.name = name
+    def __init__(self, title, id, quantity, price ):
+        self.title = title
         self.id = id
         self.quantity = quantity
         self.price = price
 
-print(name)
+print(title)
 print(id)
 print(quantity)
 print(price)
