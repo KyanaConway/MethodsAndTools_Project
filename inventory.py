@@ -30,7 +30,10 @@ for line in file:
     if line.startswith('price'):
         price = findValue(line)
 
-print(title)
-print(id)
-print(quantity)
-print(price)
+option = input("Would you like to view the inventory? y/n\n")
+if option == "y":
+    print(title)
+    print(id)
+    print(quantity)
+    print(price)
+else: print("exiting...")
