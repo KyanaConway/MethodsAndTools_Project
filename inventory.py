@@ -36,4 +36,5 @@ if option == "y":
     print(id)
     print(quantity)
     print(price)
-else: print("exiting...")
+
+else: print("Navigating to homepage...")
