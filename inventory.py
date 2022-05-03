@@ -3,23 +3,6 @@ delimeter = '='
 
 file = open(fileName, 'r') ##reads file
 
-def findValue(fullstring):
-    fullString = fullstring.rstrip('\n') ##ommits r variable
-    value = fullstring[fullString.index(delimeter)+1:] ##locate index to start at
-    ##value = value.replace(" ", "") ommit spaces
-    return value
-
-
-for line in file:
-    if line.startswith('title'):
-        title = findValue(line)
-    if line.startswith('id'):
-        id = findValue(line)
-    if line.startswith('quantity'):
-        quantity = findValue(line)
-    if line.startswith('price'):
-        price = findValue(line)
-
 class Inventory:
     def __init__(self, capacity):
         self.capacity = capacity
@@ -31,6 +14,21 @@ class Books:
         self.id = id
         self.quantity = quantity
         self.price = price
+
+def findValue(fullstring):
+    fullString = fullstring.rstrip('\n') ##ommits r variable
+    value = fullstring[fullString.index(delimeter)+1:] ##locate index to start at
+    return value
+
+for line in file:
+    if line.startswith('title'):
+        title = findValue(line)
+    if line.startswith('id'):
+        id = findValue(line)
+    if line.startswith('quantity'):
+        quantity = findValue(line)
+    if line.startswith('price'):
+        price = findValue(line)
 
 print(title)
 print(id)

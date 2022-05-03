@@ -1,4 +1,4 @@
-title= NAME: The Great Gatsby, The Color Purple, War and Peace, To Kill a Mocking Bird
-id= ID: 287632, 298743, 843872, 328740
-quantity= QUANTITY: 27, 16, 36, 54
-price= PRICE: $7.99, $14.99, $8.99, $13.99
+title= NAME: The Great Gatsby, The Color Purple, War and Peace, To Kill a Mocking Bird, Pride and Prejudice, Jane Eyre, Ulysses
+id= ID: 287632, 298743, 843872, 328740, 984543, 387236, 476549
+quantity= QUANTITY: 27, 16, 36, 54, 14, 34, 23
+price= PRICE: $7.99, $14.99, $8.99, $13.99, $7.99, $12.99, $5.99
