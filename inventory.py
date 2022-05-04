@@ -23,7 +23,7 @@ def findValue(fullstring):
 def Purchase():
     itemsPurchased = input("What book would you like to purchase?")
     if itemsPurchased == "The Great Gatsby":
-        print("totaled: $7.99")
+        print("total: $7.99")
     if itemsPurchased == "The Color Purple":
         print("total: $14.99")
     if itemsPurchased == "War and Peace":
