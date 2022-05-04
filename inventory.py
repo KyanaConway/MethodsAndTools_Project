@@ -20,6 +20,23 @@ def findValue(fullstring):
     value = fullstring[fullString.index(delimeter)+1:] ##locate index to start at
     return value
 
+def Purchase():
+    itemsPurchased = input("What book would you like to purchase?")
+    if itemsPurchased == "The Great Gatsby":
+        print("totaled: $7.99")
+    if itemsPurchased == "The Color Purple":
+        print("$14.99")
+    if itemsPurchased == "War and Peace":
+        print("totaled: $8.99")
+    if itemsPurchased == "To Kill a Mocking Bird":
+        print("totaled: $13.99")
+    if itemsPurchased == "Pride and Prejudice":
+        print("totaled: $7.99")
+    if itemsPurchased == "Jane Eyre":
+        print("totaled: $12.99")
+    if itemsPurchased == "Ulysses":
+        print("totaled: $5.99")
+
 for line in file:
     if line.startswith('title'):
         title = findValue(line)
